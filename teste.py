@@ -19,8 +19,4 @@ if resposta == "nao" or resposta == "n" or resposta == "não":
     print("Escolha Uma Senha")
     jogador["senha"] = input("")
     usuarios.append(jogador)
-else:
-    print("Insira Seu Nome ou Apelido:")
-    nome = input("")
-    print("Insira Sua Senha:")
-    senha = input("")
+    print(usuarios)
