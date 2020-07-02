@@ -19,4 +19,3 @@ if resposta == "nao" or resposta == "n" or resposta == "não":
     print("Escolha Uma Senha")
     jogador["senha"] = input("")
     usuarios.append(jogador)
-    print(usuarios)

@@ -24,3 +24,5 @@ else:
     nome = input("")
     print("Insira Sua Senha:")
     senha = input("")
+
+#Usar loops para verificar a existencia de dados
