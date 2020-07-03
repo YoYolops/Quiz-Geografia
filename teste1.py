@@ -1,21 +1,8 @@
-resposta = 0
-usuarios = []
+import json
+def ler_json():
+    with open('dados.json', 'r', encoding = 'utf8') as f:
+        return json.load(f)
 
-comp = len(usuarios)
-
-
-while resposta != 1:
-    resposta = str(input('parar 1: '))
-    print("Qual Seu Nome?")
-    nome = input("")
-
-    print("Escolha Um Apelido")
-    temp = input("")
-    apelido = temp
-
-    print("Escolha Uma Senha")
-    senha = input("")
-
-    usuarios.insert(comp, {'nome':nome,'apelido':apelido,'senha':senha})
-
-    print(usuarios)
+data = ler_json()
+usuarios = data['usuarios']
+print(usuarios)
