@@ -9,6 +9,7 @@ data = ler_json()
 usuarios = data['usuarios']
 comp = len(usuarios)
 
+c = 0
 resposta = 0
 while resposta != '3':
     print('''    [ 1 ] Cadastrar-se
@@ -22,10 +23,13 @@ while resposta != '3':
 
         print("Escolha Um Apelido")
         temp = input("")
-        for i in range(comp):
-            if usuarios[i]['apelido'] == temp:
-                temp = None
-                print("Esse Apelido já Foi Escolhido")
+        while c < comp:
+            for i in range(comp):
+                if usuarios[c]['apelido'] == temp:
+                    c = -1
+                    print("Esse Apelido já Foi Escolhido. Insira outro")
+                    temp = input("")
+            c +=1
         apelido = temp
 
         print("Escolha Uma Senha")
