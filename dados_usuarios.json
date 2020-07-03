@@ -1,0 +1,18 @@
+{
+    "usuarios": [
+        {
+            "nome": "zeca",
+            "apelido": "ze",
+            "senha": "567",
+            "pontos": null,
+            "acerto": null
+        },
+        {
+            "nome": "zeca",
+            "apelido": "ze",
+            "senha": "567",
+            "pontos": null,
+            "acerto": null
+        }
+    ]
+}

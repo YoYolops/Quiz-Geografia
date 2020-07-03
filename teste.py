@@ -7,10 +7,14 @@ jogador = {"nome":None,
 usuarios = []
 comp = len(usuarios)
 
-print("Você Já Possui Cadastro? (S/N)")
-resposta = input("")
+print('''[ 1 ] Cadastrar-se
+[ 2 ] Entrar
+[ 3 ] Sair''')
+
+
+resposta = str(input('O que deseja fazer?'))
 resposta = resposta.lower()
-if resposta == "nao" or resposta == "n" or resposta == "não":
+if resposta == "1":
     print("Qual Seu Nome?")
     jogador["nome"] = input("")
 
