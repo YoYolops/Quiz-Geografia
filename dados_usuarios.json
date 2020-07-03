@@ -3,16 +3,12 @@
         {
             "nome": "zeca",
             "apelido": "ze",
-            "senha": "567",
-            "pontos": null,
-            "acerto": null
+            "senha": "321"
         },
         {
-            "nome": "zeca",
-            "apelido": "ze",
-            "senha": "567",
-            "pontos": null,
-            "acerto": null
+            "nome": "yohan",
+            "apelido": "yoyo",
+            "senha": "123"
         }
     ]
 }
