@@ -25,7 +25,7 @@ while resposta != '3':
         temp = input("")
         while c < comp:
             for i in range(comp):
-                if usuarios[c]['apelido'] == temp:
+                if usuarios[i]['apelido'] == temp:
                     c = -1
                     print("Esse Apelido já Foi Escolhido. Insira outro")
                     temp = input("")
