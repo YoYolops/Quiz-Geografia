@@ -19,9 +19,9 @@ if resposta == "nao" or resposta == "n" or resposta == "não":
     temp = input("")
     for i in range(comp):
         if usuarios[i]['apelido'] == temp:
+            temp = None
             print("Esse Apelido já Foi Escolhido")
-        else:
-            jogador["apelido"] = temp
+    jogador["apelido"] = temp
     print("Escolha Uma Senha")
     jogador["senha"] = input("")
 
