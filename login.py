@@ -1,16 +1,17 @@
 import json
 
-def ler_json():
+def ler_json(): #Função de leitura de dados json
     with open('dados.json', 'r', encoding = 'utf8') as f:
         return json.load(f)
 
-data = ler_json()
+data = ler_json() #json bruto
 
-usuarios = data['usuarios']
+usuarios = data['usuarios'] #uma lista com os dicionarios dos dados dos usuários
 comp = len(usuarios)
 
-c = 0
-resposta = 0
+binario = 0
+c = 0 #Contador de loop de verificação de apelido em cadastro
+resposta = 0 #resposta do menu do usuário
 while resposta != '3':
     print('''    [ 1 ] Cadastrar-se
     [ 2 ] Entrar
@@ -41,8 +42,19 @@ while resposta != '3':
         apelido = input("")
         print("Insira Sua Senha:")
         senha = input("")
+        #Verificar se o apelido existe:
+        for i in usuarios:
+            if apelido in i.values() and senha in i.values():
+                print('Bem Vindo dale')
+                binario = 1
+                break
+        if binario != 1:
+            print('Apelido ou senha incorretos.')
 
-    #Para Gravar:
+
+
+
+    #Para Gravar os dados coletados:
 save_usuarios = {'usuarios': usuarios}
 save_usuarios = json.dumps(save_usuarios, indent=4, sort_keys=False)
 try:

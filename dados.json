@@ -9,6 +9,11 @@
             "nome": "gabriel",
             "apelido": "deodato",
             "senha": "123"
+        },
+        {
+            "nome": "marcos",
+            "apelido": "mar",
+            "senha": "007"
         }
     ]
 }
