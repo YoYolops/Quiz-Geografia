@@ -45,13 +45,13 @@ while resposta != '3':
         #Verificar se o apelido existe:
         for i in usuarios:
             if apelido in i.values() and senha in i.values():
-                print('Bem Vindo dale')
+                print('Bem Vindo(a)')
                 binario = 1
-                break
         if binario != 1:
             print('Apelido ou senha incorretos.')
 
-
+        elif binario == 1:
+            
 
 
     #Para Gravar os dados coletados:

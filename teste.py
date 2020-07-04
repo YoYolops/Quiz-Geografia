@@ -9,4 +9,4 @@ data = ler_json()
 usuarios = data['usuarios']
 
 for i in usuarios:
-    print(usuarios[i]['nome'])
+    if
