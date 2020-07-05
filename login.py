@@ -50,8 +50,7 @@ while resposta != '3':
         if binario != 1:
             print('Apelido ou senha incorretos.')
 
-        elif binario == 1:
-            
+
 
 
     #Para Gravar os dados coletados:

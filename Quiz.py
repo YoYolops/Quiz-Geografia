@@ -102,8 +102,33 @@ while resposta != '3':
                 print("Correto!")
             else: print("Infelizmente, você errou.")
 
-            percentual = pontos * 20
-            print("Você fez %d pontos de 5, tendo %d por cento de acerto"%(pontos, percentual))
+            print("#########################################################################")
+            print("6 - Qual o primeiro país da América do Sul a eleger uma pesidente mulher?")
+            resp6 = input("")
+            resp6 = resp6.lower()
+            if resp6 == "argentina":
+                pontos += 1
+                print("Correto!")
+            else: print("Você errou.")
+
+            print("#########################################################################")
+            print("7 - Qual foi o primeiro presidente do Brasil?")
+            resp7 = input("")
+            resp7 = resp7.lower()
+            if resp7 == "marechal deodoro da fonseca" or resp7 == "deodoro da fonseca":
+                pontos += 1
+                print("Certo")
+            else: print("Errado.")
+
+            print("#########################################################################")
+            print("8 - Quem foi o primeiro(a) programador(a) da história?")
+            resp8 = input("")
+            resp8 = resp8.lower()
+            if resp8 == "ada lovelace" or resp8 == "ada":
+                pontos += 1
+                print("Certo")
+            else: print("Errado.")
+
 
 
 
