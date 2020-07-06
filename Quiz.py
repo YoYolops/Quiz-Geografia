@@ -16,7 +16,6 @@ comp = len(usuarios)
 
 quantperg = 0 #contador de quantidade de perguntas (Usado para calcular percentual de acerto)
 pontos = 0 # Variável de armazenamento de pontuação individual
-binario = 0 # Fator de decisão de execuções de algumas linhas, 1: positivo/ 0: negativo
 c = 0 #Contador de loop de verificação de apelido em cadastro
 resposta = 0 #resposta do menu do usuário
 
@@ -78,6 +77,7 @@ while resposta != '3':
         print("Insira Sua Senha:")
         senha = input("")
         #Verificar se o apelido existe:
+        binario = 0 # Fator de decisão de execuções de algumas linhas, 1: positivo/ 0: negativo
         for i in usuarios:
             if apelido in i.values() and senha in i.values():
                 print('Bem Vindo(a)')
@@ -173,6 +173,7 @@ while resposta != '3':
             print('Você acertou %d, tendo %d por cento de acerto'%(pontos, percentual))
             print()
 
+            binario = 0 # Fator de decisão de execuções de algumas linhas, 1: positivo/ 0: negativo
             for i in ranqueamento:
                 if i['apelido'] == apelido:
                     i['pontos'] = pontos

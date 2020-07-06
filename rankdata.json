@@ -7,6 +7,11 @@
         },
         {
             "apelido": "mar",
+            "pontos": 1,
+            "percentual": 12.5
+        },
+        {
+            "apelido": "deodato",
             "pontos": 0,
             "percentual": 0.0
         }
