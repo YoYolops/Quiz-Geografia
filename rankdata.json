@@ -2,18 +2,13 @@
     "ranqueamento": [
         {
             "apelido": "yoyo",
-            "pontos": 1,
-            "percentual": 12.5
+            "pontos": 0,
+            "percentual": 0.0
         },
         {
             "apelido": "mar",
-            "pontos": 2,
-            "percentual": 25.0
-        },
-        {
-            "apelido": "mar",
-            "pontos": 1,
-            "percentual": 12.5
+            "pontos": 0,
+            "percentual": 0.0
         }
     ]
 }

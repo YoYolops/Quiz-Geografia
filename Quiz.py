@@ -16,7 +16,7 @@ comp = len(usuarios)
 
 quantperg = 0 #contador de quantidade de perguntas (Usado para calcular percentual de acerto)
 pontos = 0 # Variável de armazenamento de pontuação individual
-binario = 0
+binario = 0 # Fator de decisão de execuções de algumas linhas, 1: positivo/ 0: negativo
 c = 0 #Contador de loop de verificação de apelido em cadastro
 resposta = 0 #resposta do menu do usuário
 
@@ -173,9 +173,15 @@ while resposta != '3':
             print('Você acertou %d, tendo %d por cento de acerto'%(pontos, percentual))
             print()
 
-            ranqueamento.insert(len(ranqueamento), { #inserção dos dados de pontuação no rankdata
-                'apelido':apelido, 'pontos':pontos, 'percentual':percentual
-            })
+            for i in ranqueamento:
+                if i['apelido'] == apelido:
+                    i['pontos'] = pontos
+                    i['percentual'] = percentual
+                    binario = 1
+            if binario != 1:
+                ranqueamento.insert(len(ranqueamento), { #inserção dos dados de pontuação no rankdata
+                    'apelido':apelido, 'pontos':pontos, 'percentual':percentual
+                })
 
     #Para Gravar os dados coletados:
 save_usuarios = {'usuarios': usuarios}
