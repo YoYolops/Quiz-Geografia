@@ -9,13 +9,43 @@ data = ler_json() #json bruto
 usuarios = data['usuarios'] #uma lista com os dicionarios dos dados dos usuários
 comp = len(usuarios)
 
+quantperg = 0 #contador de quantidade de perguntas (Usado para calcular percentual de acerto)
+pontos = 0 # Variável de armazenamento de pontuação individual
 binario = 0
 c = 0 #Contador de loop de verificação de apelido em cadastro
 resposta = 0 #resposta do menu do usuário
+
+print()
+print('###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~## ')
+print('#####~~~~~~~~~~~~~~~~~~~~~~~~~~~~#####')
+print('#######~~~~~~~~~~~~~~~~~~~~~~~~#######')
+print('##########~~~~~~~~~~~~~~~~~~##########')
+print('###########~~~~~~~~~~~~~~~~~##########')
+print('######################################')
+print('######################################')
+print('######################################')
+print('########~~##################~~########')
+print('########~~~~~#############~~~~########')
+print('########~~~~~~~########~~~~~~~########')
+print('########~~~~~~~########~~~~~~~########')
+print('######################################')
+print('######################################')
+print('######################################')
+print('###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~##')
+print('~~~##~~~~~~~~#############~~~~~~~###~~')
+print('~~~##~~~~~~~~~~~~~~~~~~~~~~~~~~~~###~~')
+print('~~~~~###~~~~~~~~~~~~~~~~~~~~~~###~~~~~')
+print('~~~~~~~~#####~~~~~~~~~~~~#####~~~~~~~~')
+print('~~~~~~~~~~~~~#############~~~~~~~~~~~~')
+print('Desenvolvido por YoYo Produções \n Quizyo   v0.3 ALPHA')
+print()
+
 while resposta != '3':
     print('''    [ 1 ] Cadastrar-se
     [ 2 ] Entrar
-    [ 3 ] Sair''')
+    [ 3 ] Sair
+    [ 4 ] Rank''')
+    print()
 
     resposta = str(input("O que deseja fazer? "))
     if resposta == "1":
@@ -52,16 +82,13 @@ while resposta != '3':
 
         elif binario == 1:
             print("Teste Seus Conhecimentos de América do Sul!!!")
-            print("Desenvolvido por YoYo Produções \n Versão 0.2 ALPHA")
             print("#########################################################################")
-
-
-            pontos = 0
 
 
             print("1 - Quantos países soberanos existem na América do Sul? ")
             resp1 = input()
-            if resp1 == 12 or resp1 == "doze" or resp1 == 'Doze':
+            quantperg += 1
+            if resp1 == '12' or resp1 == "doze" or resp1 == 'Doze':
                 pontos += 1
                 print("Certo! Sua pontuação é: %d"%pontos)
             else: print("Errado, sua pontuação é: %d"%pontos)
@@ -70,6 +97,7 @@ while resposta != '3':
             print('2 - Qual o Maior País da América do Sul? ')
             resp2 = input("")
             resp2 = resp2.lower()
+            quantperg += 1
             if resp2 == "brasil":
                 pontos += 1
                 print("Parabéns, sua pontuação é: %d"%pontos)
@@ -79,6 +107,7 @@ while resposta != '3':
             print("3 - Qual o Primeiro País da América do Sul a Legalizar a Maconha?")
             resp3 = input("")
             resp3 = resp3.lower()
+            quantperg += 1
             if resp3 == "uruguai":
                 pontos += 1
                 print("Certíssimo! Sua Pontuação é %d"%pontos)
@@ -88,6 +117,7 @@ while resposta != '3':
             print("4 - Qual o País Europeu que Possui Território no Continente Sulamericano?")
             resp4 = input("")
             resp4 = resp4.lower()
+            quantperg += 1
             if resp4 == "frança":
                 pontos += 1
                 print("Muito bem! Sua pontuação é: %d"%pontos)
@@ -97,6 +127,7 @@ while resposta != '3':
             print("5 - Diga o Nome do Único País da América do Sul que Começa com S")
             resp5 = input("")
             resp5 = resp5.lower()
+            quantperg += 1
             if resp5 == "suriname":
                 pontos += 1
                 print("Correto!")
@@ -106,6 +137,7 @@ while resposta != '3':
             print("6 - Qual o primeiro país da América do Sul a eleger uma pesidente mulher?")
             resp6 = input("")
             resp6 = resp6.lower()
+            quantperg += 1
             if resp6 == "argentina":
                 pontos += 1
                 print("Correto!")
@@ -115,6 +147,7 @@ while resposta != '3':
             print("7 - Qual foi o primeiro presidente do Brasil?")
             resp7 = input("")
             resp7 = resp7.lower()
+            quantperg += 1
             if resp7 == "marechal deodoro da fonseca" or resp7 == "deodoro da fonseca":
                 pontos += 1
                 print("Certo")
@@ -124,12 +157,15 @@ while resposta != '3':
             print("8 - Quem foi o primeiro(a) programador(a) da história?")
             resp8 = input("")
             resp8 = resp8.lower()
+            quantperg += 1
             if resp8 == "ada lovelace" or resp8 == "ada":
                 pontos += 1
                 print("Certo")
             else: print("Errado.")
 
-
+            print("#########################################################################")
+            percentual = (100 * pontos)/quantperg
+            print('Você acertou %d, tendo %d por cento de acerto'%(pontos, percentual))
 
 
     #Para Gravar os dados coletados:
