@@ -1,5 +1,11 @@
-pontos = 1
-quantperg = 8
+import json
 
-percentual = (100 * pontos)/quantperg
-print('Você acertou %d, tendo %d por cento de acerto'%(pontos, percentual))
+def ler_jsonrank(): #Função de leitura de dados de rank json
+    with open('rankdata.json', 'r', encoding = 'utf8') as f:
+        return json.load(f)
+
+rankdata = ler_jsonrank() #json bruto
+ranqueamento = rankdata['ranqueamento']
+
+print(rankdata)
+print(ranqueamento)

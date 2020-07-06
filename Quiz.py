@@ -3,9 +3,14 @@ import json
 def ler_json(): #Função de leitura de dados json
     with open('dados.json', 'r', encoding = 'utf8') as f:
         return json.load(f)
+def ler_jsonrank(): #Função de leitura de dados de rank json
+    with open('rankdata.json', 'r', encoding = 'utf8') as f:
+        return json.load(f)
 
-data = ler_json() #json bruto
+rankdata = ler_jsonrank() #json bruto rank
+data = ler_json() #json bruto usuarios
 
+ranqueamento = rankdata['ranqueamento']
 usuarios = data['usuarios'] #uma lista com os dicionarios dos dados dos usuários
 comp = len(usuarios)
 
@@ -166,7 +171,11 @@ while resposta != '3':
             print("#########################################################################")
             percentual = (100 * pontos)/quantperg
             print('Você acertou %d, tendo %d por cento de acerto'%(pontos, percentual))
+            print()
 
+            ranqueamento.insert(len(ranqueamento), { #inserção dos dados de pontuação no rankdata
+                'apelido':apelido, 'pontos':pontos, 'percentual':percentual
+            })
 
     #Para Gravar os dados coletados:
 save_usuarios = {'usuarios': usuarios}
@@ -178,5 +187,17 @@ try:
 except Exception as erro:
     print("Ocorreu um erro ao gravar arquivo.")
     print("O erro é: {}".format(erro))
+
+
+save_ranqueamento = {'ranqueamento': ranqueamento}
+save_ranqueamento = json.dumps(save_ranqueamento, indent=4, sort_keys=False)
+try:
+    arquivo_json = open('rankdata.json', 'w')
+    arquivo_json.write(save_ranqueamento)
+    arquivo_json.close()
+except Exception as erro:
+    print("Ocorreu um erro ao gravar arquivo.")
+    print("O erro é: {}".format(erro))
+
 
     #Usar loops para verificar a existencia de dados
